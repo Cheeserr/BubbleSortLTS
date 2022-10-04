@@ -2,7 +2,7 @@
 
 namespace BubbleSortApp
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -56,7 +56,7 @@ namespace BubbleSortApp
 
         public static int[] ArrayUnion(int[] array1, int[] array2)
         {
-            if (array1 is null || array2 is null) throw new Exception("Arrays cannot be null");
+            if (array1 is null || array2 is null) throw new ArgumentNullException();
 
             var finalArray = new List<int>();
 

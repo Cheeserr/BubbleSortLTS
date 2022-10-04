@@ -1,14 +1,15 @@
-﻿namespace BubbleSortApp
+﻿using System.Globalization;
+
+namespace BubbleSortApp
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             int[] array = { 6, 5, 9, 3, 2, -5 };
-
-            Console.WriteLine(BubbleSort2(array).ToString());
         }
 
+        /*
         public static void BubbleSort(int[] unsortedList)
         {
             int temp;
@@ -25,7 +26,7 @@
                 }
             }
         }
-
+        */
         public static int[] BubbleSort2(int[] unList)
         {
             bool swapped = true;
@@ -50,6 +51,29 @@
             int temp = number1;
             number1 = number2;
             number2 = temp;
+        }
+
+
+        public static int[] ArrayUnion(int[] array1, int[] array2)
+        {
+            if (array1 is null || array2 is null) throw new ArgumentNullException();
+
+            var finalArray = new List<int>();
+
+
+
+            foreach(int number in array1)
+            {
+                if (!finalArray.Contains(number)) finalArray.Add(number);
+            }
+            foreach (int number in array2)
+            {
+                if (!finalArray.Contains(number)) finalArray.Add(number);
+            }
+            
+
+
+            return BubbleSort2(finalArray.ToArray());
         }
     }
 }

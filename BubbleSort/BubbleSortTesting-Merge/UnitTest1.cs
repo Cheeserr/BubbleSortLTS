@@ -1,3 +1,5 @@
+using BubbleSortApp;
+
 namespace BubbleSortTesting_Merge
 {
     public class ArrayUnion_Tasks
@@ -5,7 +7,10 @@ namespace BubbleSortTesting_Merge
         [Test]
         public void WhenGiven_NullArray_ThrowException()
         {
+            int[] array = { 1, 2 };
             Assert.Throws<ArgumentNullException>(() => Program.ArrayUnion(null, null));
+            Assert.Throws<ArgumentNullException>(() => Program.ArrayUnion(null, array));
+            Assert.Throws<ArgumentNullException>(() => Program.ArrayUnion(array, null));
         }
 
         [Test]

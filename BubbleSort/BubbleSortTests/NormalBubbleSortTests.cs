@@ -4,11 +4,8 @@ namespace BubbleSortTests
 {
     public class Tests
     {
-<<<<<<< HEAD
         // Lewis is handsome
-=======
         // Nathan is handsome
->>>>>>> Sergiusz
         private int[] array = { 5, 2, 3, 8, 12 };
         private int[] arrayNeg = { -5, -2, -3, -8, -12 };
         private int[] array2 = {};

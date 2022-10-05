@@ -120,7 +120,7 @@ namespace BubbleSortApp
 
         private static void ProfileSortsIter(int count)
         {
-            int dataSetSize = 30000;
+            int dataSetSize = 25000;
 
             var dataSet1 = GenerateRandomDataSet(dataSetSize);
             var dataSet2 = GenerateRandomDataSet(dataSetSize);
@@ -129,7 +129,7 @@ namespace BubbleSortApp
             {
                 Console.WriteLine($"[{i}] (Tudor)  BubbleSort: {ProfileSortFunc(dataSetSize, BubbleSort)} ms");
                 Console.WriteLine($"[{i}] (Serg)   BubbleSort2: {ProfileSortFunc(dataSetSize, BubbleSort2)} ms");
-                Console.WriteLine($"[{i}] MergeSort: {ProfileSortFunc(dataSetSize, mergeSort)} ms");
+                //Console.WriteLine($"[{i}] MergeSort: {ProfileSortFunc(dataSetSize, mergeSort)} ms");
                 Console.WriteLine($"[{i}] ArrayUnion: {ProfileMergeSortFunc(dataSet1, dataSet2, ArrayUnion)} ms");
                 Console.WriteLine($"[{i}] ArrayUnionLewis: {ProfileMergeSortFunc(dataSet1, dataSet2, ArrayUnionLewis)} ms");
                 Console.WriteLine();

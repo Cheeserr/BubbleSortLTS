@@ -6,6 +6,7 @@ namespace BubbleSortTests
     {
         // Lewis is handsome
         // Nathan is handsome
+        // Tudor is ugly
 
         private int[] array = { 5, 2, 3, 8, 12 };
         private int[] arrayNeg = { -5, -2, -3, -8, -12 };

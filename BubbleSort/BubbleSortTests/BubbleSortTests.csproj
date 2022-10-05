@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BubbleSortApp\BubbleSortApp.csproj" />
+    <ProjectReference Include="..\MergeSortApp\MergeSortApp.csproj" />
   </ItemGroup>
 
 </Project>

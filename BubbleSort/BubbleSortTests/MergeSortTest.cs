@@ -1,4 +1,5 @@
 using BubbleSortApp;
+using MergeSortApp;
 
 namespace BubbleSortTesting
 {
@@ -44,6 +45,14 @@ namespace BubbleSortTesting
 
             var result = Program.ArrayUnion(array1, array2);
             Assert.That(result, Is.EqualTo(expected));
+        }
+
+        [Test]
+        public void MergeSortSimpleTest()
+        {
+            int[] array = { 5, 2, 3, 8, 12 };
+            int[] expected = { 2, 3, 5, 8, 12 };
+            Assert.That(MergeSortClass.MergeSort(array), Is.EqualTo(expected));
         }
     }
 }

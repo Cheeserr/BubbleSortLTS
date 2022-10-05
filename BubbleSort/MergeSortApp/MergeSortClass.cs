@@ -1,4 +1,6 @@
-﻿namespace MergeSortApp
+﻿using System;
+
+namespace MergeSortApp
 {
     public class MergeSortClass
     {
@@ -10,7 +12,11 @@
 
         public static int[] MergeSort(int[] array)
         {
-            if (array.Length == 1) return array;
+            if (array == null)
+            {
+                throw new ArgumentNullException();
+            }
+            if (array.Length <= 1) return array;
 
             int midpoint = array.Length / 2;
 
@@ -32,6 +38,10 @@
 
         public static int[] Merge(int[] array1, int[] array2)
         {
+            if (array1 == null || array2 == null)
+            {
+                throw new ArgumentNullException();
+            }
             int[] output = new int[array1.Length + array2.Length];
 
             int size1 = 0;
